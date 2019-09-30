@@ -1,0 +1,57 @@
+/* Write a program that asks the user to input an integer named 
+* numDoubles.
+* Create a dynamic array that can store numDoubles doubles and 
+* make a loop that allows the user to enter a double into each 
+* array entry. 
+* Loop through the array, calculate the average, and output it.
+* Delete the memory allocated to your dynamic array before exiting. 
+* Author: Tiffany McKay
+* Verison: 9/30/2019
+
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numDoubles; //the number of values user should enter
+    double *p; //creating pointer variable to create dynamic array
+    p = new double[numDoubles]; //creates dynamic array
+
+    cout << "Please enter the number of double values. " << endl; 
+    cin >> numDoubles;
+
+    cout << "Please enter " << numDoubles << " values: " << endl;
+
+    // reads in numbers  
+    for(int i=0; i<numDoubles; i++)
+    {
+         cin >> p[i]; 
+    }
+    
+    //writes out the numbers onto screen
+    cout << "the list of numbers were: " << endl;
+    
+    for(int i=0; i<numDoubles; i++)
+    {
+         cout << (double) p[i] << endl; 
+    }
+    
+    double average, sum=0.0; 
+
+    for (int i=0; i < numDoubles; i++)
+    {
+        sum += p[i]; //calculates sum of numbers entered
+        average = sum / numDoubles; //calculates average
+
+    }
+
+    cout << "The sum is " << sum << endl;
+    cout << "The average is " << average << endl; 
+
+    delete [] p; //deletes dynamic array to free memory in freestore
+
+return 0; 
+}
