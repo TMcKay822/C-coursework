@@ -1,10 +1,9 @@
-/* Write a program that asks the user to input an integer named 
-* numDoubles.
+/* Write a program that asks the user to input an integer named numDoubles.
 * Create a dynamic array that can store numDoubles doubles and 
-* make a loop that allows the user to enter a double into each 
-* array entry. 
+* make a loop that allows the user to enter a double into each array entry. 
 * Loop through the array, calculate the average, and output it.
 * Delete the memory allocated to your dynamic array before exiting. 
+
 * Author: Tiffany McKay
 * Verison: 9/30/2019
 
